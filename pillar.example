@@ -27,3 +27,19 @@ ius:
   testing: False
   archive: False
   dev: False
+elastic_co:
+  elasticsearch:
+    enabled: True
+    major_version: 6
+  kibana:
+    enabled: True
+    major_version: 6
+  beats:
+    enabled: True
+    major_version: 6
+  logstash:
+    enabled: True
+    major_version: 6
+  apm:
+    enabled: True
+    major_version: 6
