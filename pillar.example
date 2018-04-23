@@ -27,6 +27,15 @@ ius:
   testing: False
   archive: False
   dev: False
+brave:
+  pkgrepo:
+    enabled: True
+cb:
+  pkgrepo:
+    enabled: True
+duosecurity:
+  pkgrepo:
+    enabled: True
 elastic_co:
   elasticsearch:
     enabled: True
@@ -43,3 +52,18 @@ elastic_co:
   apm:
     enabled: True
     major_version: 6
+google-chrome:
+  pkgrepo:
+    enabled: True
+graylog:
+  pkgrepo:
+    enabled: True
+    version: 2.4
+mongodb-org:
+  pkgrepo:
+    enabled: True
+    version: 3.4
+nodesource:
+  pkgrepo:
+    enabled: True
+    version: 9
