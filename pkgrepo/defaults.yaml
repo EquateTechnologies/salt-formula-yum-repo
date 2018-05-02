@@ -1,0 +1,33 @@
+pkgrepo:
+  atomicorp:
+    enabled: False
+  brave:
+    enabled: False
+  cb:
+    opensource:
+      enabled: False
+  duosecurity:
+    enabled: False
+  elastic_co:
+    enabled: False
+    major_version: 6
+  epel:
+    enabled: False
+  google_chrome:
+    enabled: False
+  graylog:
+    enabled: False
+    release_version: 2.4
+  ius:
+    enabled: False
+  mongodb:
+    enabled: False
+    release_version: 3.4
+  nginx:
+    enabled: False
+  nodejs:
+    enabled: False
+    major_version: 9
+  salt:
+    enabled: False
+    release_version: 2018.3

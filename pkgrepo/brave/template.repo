@@ -1,0 +1,9 @@
+[pkgrepo-brave]
+name=Brave Browser
+gpgkey=https://s3-us-west-2.amazonaws.com/brave-rpm-release/keys.asc
+gpgcheck=1
+enabled={{ repo_enabled }}
+baseurl=https://s3-us-west-2.amazonaws.com/brave-rpm-release/$basearch/
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}

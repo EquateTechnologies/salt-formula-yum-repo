@@ -1,0 +1,10 @@
+[pkgrepo-cb-opensource]
+name=Carbon Black Open Source RPM Repository
+gpgcheck=0
+sslverify=1
+metadata_expire=60
+enabled={{ repo_enabled }}
+baseurl=https://opensource.carbonblack.com/release/$basearch
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}

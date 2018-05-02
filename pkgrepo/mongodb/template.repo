@@ -1,0 +1,9 @@
+[pkgrepo-mongodb]
+name=MongoDB {{ mongodb_version }} Repository
+gpgcheck=1
+gpgkey=https://www.mongodb.org/static/pgp/server-{{ mongodb_version }}.asc
+enabled={{ repo_enabled }}
+baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/{{ mongodb_version }}/$basearch/
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}

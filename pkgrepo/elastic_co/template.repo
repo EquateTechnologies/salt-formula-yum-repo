@@ -1,0 +1,9 @@
+[pkgrepo-elastic_co]
+name=Elastic Co Packages
+gpgkey=http://artifacts.elastic.co/GPG-KEY-elasticsearch
+gpgcheck=1
+enabled={{ repo_enabled }}
+baseurl=https://artifacts.elastic.co/packages/{{ major_version }}.x/yum
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}

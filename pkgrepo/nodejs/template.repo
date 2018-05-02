@@ -1,0 +1,21 @@
+[pkgrepo-nodejs]
+name=Node.js Packages for Enterprise Linux $releasever - $basearch
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/NODESOURCE-GPG-SIGNING-KEY-EL
+enabled={{ repo_enabled }}
+baseurl=https://rpm.nodesource.com/pub_{{ node_version }}.x/el/$releasever/$basearch
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}
+
+{%- if enable_source_repo == True %}
+[pkgrepo-nodejs-source]
+name=Node.js Packages for Enterprise Linux $releasever - $basearch - Source
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/NODESOURCE-GPG-SIGNING-KEY-EL
+enabled={{ repo_enabled }}
+baseurl=https://rpm.nodesource.com/pub_{{ node_version }}.x/el/$releasever/SRPMS
+{%- for option_name, option_value in source_repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}
+{%- endif %}

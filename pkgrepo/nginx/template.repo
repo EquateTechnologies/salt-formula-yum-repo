@@ -1,0 +1,9 @@
+[pkgrepo-nginx]
+name=nginx Repository
+gpgcheck=1
+gpgkey=http://nginx.org/keys/nginx_signing.key
+enabled={{ repo_enabled }}
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}

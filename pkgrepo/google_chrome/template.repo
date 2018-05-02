@@ -1,0 +1,9 @@
+[pkgrepo-google_chrome]
+name=Google Chrome
+gpgkey=https://dl-ssl.google.com/linux/linux_signing_key.pub
+gpgcheck=1
+enabled={{ repo_enabled }}
+baseurl=http://dl.google.com/linux/chrome/rpm/stable/$basearch
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}

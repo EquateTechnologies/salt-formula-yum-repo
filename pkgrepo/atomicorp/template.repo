@@ -1,0 +1,9 @@
+[pkgrepo-atomicorp]
+name=atomicorp Repository
+gpgkey=https://www.atomicorp.com/RPM-GPG-KEY.art.txt https://www.atomicorp.com/RPM-GPG-KEY.atomicorp.txt
+gpgcheck=1
+enabled={{ repo_enabled }}
+mirrorlist=http://updates.atomicorp.com/channels/mirrorlist/atomic/centos-$releasever-$basearch
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}
