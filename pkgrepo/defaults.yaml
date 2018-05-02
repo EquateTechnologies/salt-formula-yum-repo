@@ -31,3 +31,5 @@ pkgrepo:
   salt:
     enabled: False
     release_version: 2018.3
+  zfs:
+    enabled: False
