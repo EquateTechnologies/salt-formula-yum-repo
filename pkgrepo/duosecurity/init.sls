@@ -1,6 +1,6 @@
 {% from "pkgrepo/map.jinja" import pkgrepo_settings with context %}
 
-pkgrepo-brave:
+pkgrepo-duosecurity:
   file.managed:
     - name: /etc/yum.repos.d/pkgrepo-duosecurity.repo
     - source: salt://pkgrepo/duosecurity/template.repo
