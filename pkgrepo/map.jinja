@@ -3,7 +3,7 @@
 {% set os_family_map = salt['grains.filter_by']({
     'default': {
     },
-  }, grain='os', default='default', merge=salt['pillar.get']('yum:lookup')) %}
+  }, grain='os', default='default', merge=salt['pillar.get']('pkgrepo:lookup')) %}
 
 {% set os_map = salt['grains.filter_by']({
     'default': {
