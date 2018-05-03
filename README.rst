@@ -189,3 +189,29 @@ salt release version can be influenced using pillar configuration. Refer to pill
 --------
 
 Removes yum repo for Salt Stack.
+
+``pkgrepo.zfs``
+--------
+
+Configures yum repo for ZFS
+
+Repository will be marked enabled only by setting the Pillar ``pkgrepo:zfs:enabled: True``.
+
+NOTE: Requires URL to RPM via pillar pkgrepo.zfs.rpm
+
+``pkgrepo.zfs.remove``
+--------
+
+Removes yum repo for ZFS.
+
+``pkgrepo.thousandeyes``
+--------
+
+Configures yum repo for ThousandEyes
+
+Repository will be marked enabled only by setting the Pillar ``pkgrepo:thousandeyes:enabled: True``.
+
+``pkgrepo.thousandeyes.remove``
+--------
+
+Removes yum repo for ThousandEyes
