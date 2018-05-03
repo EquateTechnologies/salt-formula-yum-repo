@@ -1,0 +1,10 @@
+[thousandeyes]
+name=ThousandEyes
+baseurl=http://yum.thousandeyes.com/CentOS/7/x86_64/
+gpgkey=http://yum.thousandeyes.com/RPM-GPG-KEY-thousandeyes
+gpgcheck=1
+priority=99
+enabled={{ repo_enabled }}
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}
