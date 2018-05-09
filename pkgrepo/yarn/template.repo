@@ -1,0 +1,9 @@
+[pkgrepo-yarn]
+name=Yarn Repository
+gpgkey=https://dl.yarnpkg.com/rpm/pubkey.gpg
+gpgcheck=1
+enabled={{ repo_enabled }}
+baseurl=https://dl.yarnpkg.com/rpm/
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}
