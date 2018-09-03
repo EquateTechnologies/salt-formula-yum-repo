@@ -33,3 +33,6 @@ pkgrepo:
     release_version: 2018.3
   zfs:
     enabled: False
+  mariadb:
+    enabled: False
+    release_version: 10.3
