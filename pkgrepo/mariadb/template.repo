@@ -1,0 +1,9 @@
+[pkgrepo-mariadb]
+name = MariaDB
+enabled = {{ repo_enabled }}
+baseurl = http://yum.mariadb.org/{{ mariadb_version }}/{{ distro_path }}
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+{%- for option_name, option_value in repo_options.items() %}
+{{ option_name }}={{ option_value }}
+{%- endfor %}
