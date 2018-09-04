@@ -12,7 +12,7 @@
 {% set distro_name = "rhel" %}
 {% endif %}
 
-{% set distro_path = distro_name + grains.osmajorrelease + "-" + distro_arch %}
+{% set distro_path = distro_name + grains.osmajorrelease|string + "-" + distro_arch %}
 
 pkgrepo-mariadb:
   file.managed:
